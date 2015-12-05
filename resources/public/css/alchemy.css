@@ -1,19 +1,54 @@
 .title {
     padding: 0 0 20px 10px;
 }
+.panel-container {
+    position: relative;
+    margin-bottom: 2rem;
+}
+.score {
+    font-size: 12px;
+    text-align: right;
+    padding: 1rem;
+    background-color: lightblue;
+}
+.notification {
+    background-color: lightgreen;
+    padding: 1rem;
+    margin: 2rem 0;
+}
 .side-panel {
-    background-color: violet;
-    width: 300px;
+    float: left;
+    width: 50%;
+}
+.selected-panel {
+    float: right;
+    padding: 0 1rem; 
+    width: 50%;
 }
 .menu {
     list-style: none;
+    height: 300px;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
 }
 .menu-item {
     cursor: pointer;
-    width: 100%;
     padding: 1rem;
     background-color: lightgrey;
 }
 .menu-item:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+}
+.menu-item--selected {
+    background-color: violet;
+    color: white;
+}
+.menu-item--selected:hover {
+    color: black;
+}
+
+button.transmogrify {
+    position: absolute;
+    right: 0;
 }

@@ -6,3 +6,18 @@
  :available
  (fn [db]
    (reaction (:available @db))))
+
+(re-frame/register-sub
+ :database
+ (fn [db]
+   (reaction (:database @db))))
+
+(re-frame/register-sub
+ :selected
+ (fn [db]
+   (reaction (:selected @db))))
+
+(re-frame/register-sub
+ :last-matched
+ (fn [db]
+   (reaction (:last-matched @db))))

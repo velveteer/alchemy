@@ -1,9 +1,15 @@
 (ns alchemy.db)
 
-(def default-items [
-                    {:name "fire"} 
-                    {:name "water"} 
-                    {:name "earth"}
-                    {:name "air"}])
+(def database {"steam" #{"fire" "water"}
+               "dust" #{"earth" "air"}
+               "smoke" #{"fire" "dust"}
+               "clouds" #{"water" "air"}
+               "gold" #{"water" "fire" "earth" "air"}})
+           
+(def default-items (sorted-set "fire" "water" "earth" "air"))
+
 (def default-db
-  {:available default-items})
+  {:database database
+   :available default-items
+   :selected #{}
+   :last-matched nil})
